@@ -1,25 +1,64 @@
 aid: mindy
+
 name: Mindy
-description: 'Mindy is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by sequoia-capital) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Mindy is an AI‑first workflow automation platform that started in 2023 to make artificial intelligence accessible and useful for everyday users. Initially an email‑first AI agent, Mindy helped simplify complex workflows, manage context, and turn communications into actionable tasks. The product expanded to support content workflows for creators and brand teams. In 2024 Mindy joined WorkWhile, an AI‑native labor platform, extending its reach to frontline enterprise workers and broadening its impact across the workforce.'
+
 url: https://raw.githubusercontent.com/api-evangelist/mindy/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
 - Company
-apis: []
+- AI
+- Workflow Automation
+- Email Agent
+- Enterprise
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- sequoia-capital
+
 common:
+- type: Hosts
+  url: hosts/mindy-hosts.yml
+- type: DomainSecurity
+  url: security/mindy-domain-security.yml
 - type: Website
   url: https://mindy.com/
+
+apis: []
+
+x-backed-by:
+- sequoia-capital
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-23'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://mindy.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
